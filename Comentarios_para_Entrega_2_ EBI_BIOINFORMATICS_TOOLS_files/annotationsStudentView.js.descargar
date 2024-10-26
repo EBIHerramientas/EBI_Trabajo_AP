@@ -1,0 +1,6 @@
+const annotations = document.querySelector('d2l-annotations');
+if (annotations) {
+	D2L.LP.Web.Authentication.OAuth2.GetToken("*:*:*").then(function(token) {
+		annotations.token = token;
+	})
+}
